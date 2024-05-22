@@ -8,6 +8,9 @@
     <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
   <p>Data Yang Di cari : {{ $search }}</p>
+  
+  <a href="{{ route('siswa_tambah') }}" class="btn btn-primary">Tambah Data</a>
+<a href="{{ route('siswa') }}" class="btn btn-primary">Refresh</a>
   <table class="table mt-3 border">
     <thead>
       <tr>
@@ -31,5 +34,6 @@
     @endforeach
     </tbody>
   </table>
+  {{ $dataSiswa->links('vendor.pagination.bootstrap-5') }}
 </div>
 @endsection

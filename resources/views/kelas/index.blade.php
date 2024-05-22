@@ -21,17 +21,21 @@
  
     </thead>
     <tbody>
-      @foreach($dataKelas as $item)
+      @foreach($dataKelas  as  $key =>$item)
       <tr>
-       <td>{{ $loop->iteration }}</td>
+       <td>{{$loop->iteration }}</td>
        <td>{{ $item->kelas }}</td>
        <td>
- <a href=""  class="btn btn-warning">Edit</a>
- <a href=""  class="btn btn-danger">Hapus</a>
+ <a href="{{ route('edit',$item->id) }}"  class="btn btn-warning">Edit</a>
+ <form action="{{ route('hapus',$item->id) }}" method="post">
+@csrf
+<button type="submit" class="btn btn-danger">hapus</button>
+</form>
        </td>
       </tr>
       @endforeach
     </tbody>
   </table>
+  {{ $dataKelas->links('vendor.pagination.bootstrap-5') }}
 </div>
 @endsection
