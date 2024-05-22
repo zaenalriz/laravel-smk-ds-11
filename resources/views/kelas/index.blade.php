@@ -8,6 +8,9 @@
     <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
   <p>Data Yang Di cari : {{ $search }}</p>
+
+  <a href="{{ route('tambah_kelas') }}" class="btn btn-primary">Tambah Data</a>
+<a href="{{ route('kelas') }}" class="btn btn-primary">Refresh</a>
   <table class="table mt-3 border">
     <thead>
       <tr>
@@ -15,11 +18,12 @@
         <th scope="col">Kelas</th>
         <th scope="col">Aksi</th>
       </tr>
+ 
     </thead>
     <tbody>
       @foreach($dataKelas as $item)
       <tr>
-       <td>1</td>
+       <td>{{ $loop->iteration }}</td>
        <td>{{ $item->kelas }}</td>
        <td>
  <a href=""  class="btn btn-warning">Edit</a>

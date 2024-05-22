@@ -21,5 +21,10 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/siswa',[SiswaController::class,'siswa'])->name('siswa');
 
 Route::get('/kelas',[KelasController::class,'index'])->name('kelas');
+Route::get('/kelas/tambah',[KelasController::class,'tambah'])
+->name('tambah_kelas');
+Route::post('kelas/aksi_tambah',[KelasController::class,'aksi_tambah'])
+->name('aksi_tambah')
+;
 
 
