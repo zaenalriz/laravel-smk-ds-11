@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <h2>Edit kelas</h2>
-    <form action="{{ route('aksi_tambah') }}" method="post">
+    <form action="{{ route('aksi_edit',$dataKelas->id) }}" method="post">
         @csrf
         <div class="mb-3">
             <label class="form-label">Kelas</label>

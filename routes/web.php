@@ -35,6 +35,7 @@ Route::get('kelas/edit/{id}',[KelasController::class,'edit'])
 Route::post('kelas/hapus/{id}',[KelasController::class,'hapus'])
 ->name('hapus')
 ;
-
+Route::post('kelas/aksi_edit/{id}',[KelasController::class,'aksi_edit'])
+->name('aksi_edit');
 
 
