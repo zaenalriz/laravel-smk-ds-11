@@ -1,30 +1,25 @@
 @extends('layouts.index')
 @section('title','Home')
 @section('content')
-ini content coba coba
-@php 
-$sekolah='smk ds';
-$no=2;
-$array=[1,2,3,4];
-@endphp
-@foreach ($array as $item)
-<h1> {{ $item }}   </h1> 
-@endforeach
-
-@if($no==1)
-<button>no {{ $no }}</button>
-@else 
-<button>no bukan 1</button>
-@endif
-
-{{ $sekolah }}
-    halaman utama
-    {{-- laravel --}}
-    {{ $nama_lengkap }}
-
-
-    <?php echo $kelas ?>
-    <a href="/siswa">
-        halaman siswa
-    </a>
-    @endsection
+<div class="container mt-3">
+    <div class="row gap-3">
+        <div class="col-lg-3">
+            <div class="card bg-primary" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Jumlah Kelas</h5>
+                  <h6 class="card-subtitle mb-2 text-white">{{ $jumlahKelas }}</h6>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card bg-primary" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Jumlah Siswa</h5>
+                  <h6 class="card-subtitle mb-2 text-white">{{ $jumlahSiswa }}</h6>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+@endsection

@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        $nama='eko';
-        $kelas='11 sija';
-        return view('home.index',
-        ['nama_lengkap'=>$nama,'kelas'=>$kelas]);
+        // SELECT COUNT(id) FROM `kelas`
+       $jumlahKelas=Kelas::count();
+       $jumlahSiswa=Siswa::count();
+        return view('home.index',[
+            'jumlahKelas'=>$jumlahKelas,
+            'jumlahSiswa'=>$jumlahSiswa
+        ]);
     }
 }

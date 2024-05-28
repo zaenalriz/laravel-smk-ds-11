@@ -2,6 +2,19 @@
 @section('content')
 <div class="container">
     <h2>Tambah kelas</h2>
+@if ($errors->any())
+    <ul>
+      @foreach ($errors->all() as $error)
+          <li>
+            <div class="text-danger">
+                {{ $error }}
+              </div>
+         
+          </li>
+      @endforeach
+    </ul>
+@endif
+
     <form action="{{ route('aksi_tambah') }}" method="post">
         @csrf
         <div class="mb-3">

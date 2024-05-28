@@ -25,6 +25,13 @@ class KelasController extends Controller
     }
     public function aksi_tambah(Request $request)
     {
+
+        $request->validate([
+            'kelas' => 'required'
+        ],[
+            'kelas.required'=>'kelas wajib di isi!'
+        ]);
+
         Kelas::insert([
             'kelas' => $request->kelas
         ]);
@@ -64,12 +71,12 @@ class KelasController extends Controller
         return redirect()->route('kelas');
     }
 
-    public function aksi_edit(Request $request,$id)
+    public function aksi_edit(Request $request, $id)
     {
         // echo $id;
         // dd($request->only(['kelas']));
         // UPDATE kelas set kelas=$request->kelas where id=$id;
-        Kelas::where('id',$id)->update($request->only(['kelas']));
+        Kelas::where('id', $id)->update($request->only(['kelas']));
         return redirect()->route('kelas');
         // Kelas::where('id',$id)->update([
         //     'kelas'=>$request->kelas
