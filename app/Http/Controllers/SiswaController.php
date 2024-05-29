@@ -26,5 +26,6 @@ class SiswaController extends Controller
             'nama' => $request->nama,
             'alamat' => $request->alamat
         ]);
+        return  redirect()->route('siswa');
     }
 }

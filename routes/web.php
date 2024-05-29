@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\SiswaController;
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,20 @@ Route::post('kelas/hapus/{id}',[KelasController::class,'hapus'])
 Route::post('kelas/aksi_edit/{id}',[KelasController::class,'aksi_edit'])
 ->name('aksi_edit');
 
+
+// halaman nilai
+Route::get('nilai',[NilaiController::class,'index'])
+->name('nilai')
+;
+Route::get('nilai/tambah',[NilaiController::class,'tambah'])
+->name('nilai_tambah');
+Route::post('nilai/aksi_tambah_nilai',
+[NilaiController::class,'aksi_tambah'])
+->name('aksi_tambah_nilai');
+Route::post('nilai/hapus/{id}',[NilaiController::class,'hapus'])
+->name('hapus_nilai');
+
+
+// buat route register dan login
+// Route::get('register',[]);
 

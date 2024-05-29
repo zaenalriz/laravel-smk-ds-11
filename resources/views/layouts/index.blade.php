@@ -25,6 +25,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('kelas') }}">Kelas</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('nilai') }}">Nilai</a>
+              </li>
             </ul>
           </div>
         </div>
