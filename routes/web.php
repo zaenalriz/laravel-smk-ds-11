@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelasController;
@@ -53,6 +54,8 @@ Route::post('nilai/hapus/{id}',[NilaiController::class,'hapus'])
 ->name('hapus_nilai');
 
 
-// buat route register dan login
-// Route::get('register',[]);
-
+Route::get('nilai/edit/{id}',[NilaiController::class,'edit'])
+->name('nilai_edit')
+;
+Route::post('nilai/aksi_edit/{id}',[NilaiController::class,'aksi_edit'])
+->name('nilai_aksi_edit');
