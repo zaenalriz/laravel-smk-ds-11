@@ -2,6 +2,7 @@
 @section('title','Home')
 @section('content')
 <div class="container mt-3">
+  <h3>Hallo {{ auth()->user()->nama }}</h3>
     <div class="row gap-3">
         <div class="col-lg-3">
             <div class="card bg-primary" style="width: 18rem;">
