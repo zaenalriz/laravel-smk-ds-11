@@ -29,6 +29,9 @@ Route::middleware(['auth.check'])->group(function () {
     // siswa
     Route::get('/siswa/tambah', [SiswaController::class, 'tambah'])->name('siswa_tambah');
     Route::post('/siswa/aksi_tambah', [SiswaController::class, 'aksi_tambah'])->name('aksi_tambah_siswa');
+    Route::post('/siswa/aksi_hapus/{id}', [SiswaController::class, 'hapus'])->name('aksi_hapus_siswa');
+    Route::get('/siswa/edit/{id}', [SiswaController::class, 'edit'])->name('edit_siswa');
+    Route::post('/siswa/aksi_edit/{id}', [SiswaController::class, 'update'])->name('aksi_edit_siswa');
     // kelas
     Route::get('/kelas', [KelasController::class, 'index'])->name('kelas');
     Route::get('/kelas/tambah', [KelasController::class, 'tambah'])
