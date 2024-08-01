@@ -13,7 +13,6 @@
                 <input type="text" name="alamat" value="{{ $siswa->alamat }}" class="form-control"
                     placeholder="Masukan alamat">
             </div>
-     
             <button type="submit" class="btn btn-primary">Edit</button>
         </form>
     </div>
