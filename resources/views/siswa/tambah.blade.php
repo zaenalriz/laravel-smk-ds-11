@@ -12,6 +12,7 @@
                 <label class="form-label">Alamat</label>
                 <input type="text" name="alamat" class="form-control" placeholder="Masukan alamat">
             </div>
+           
             <button type="submit" class="btn btn-primary">Tambah</button>
         </form>
     </div>

@@ -66,9 +66,9 @@ Route::middleware(['auth.check'])->group(function () {
 
     // profile
     Route::get('profile', [ProfileController::class, 'index'])->name('profile');
-    Route::post('aksi_edit_profile', [ProfileController::class,'aksi_edit_profile'])->name('aksi_edit_profile');
+    Route::post('aksi_edit_profile', [ProfileController::class, 'aksi_edit_profile'])->name('aksi_edit_profile');
 
-    
+
     Route::get('logout', [AuthController::class, 'logout'])
         ->name('logout');
 });

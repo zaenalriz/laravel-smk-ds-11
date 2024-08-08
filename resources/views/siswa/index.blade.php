@@ -1,6 +1,5 @@
 @extends('layouts.index')
 @section('title','Siswa')
-   
 @section('content')
 <div class="container mt-5">
   <form class="d-flex" role="search">
